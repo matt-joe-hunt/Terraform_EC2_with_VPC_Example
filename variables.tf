@@ -1,6 +1,6 @@
 variable "region-master" {
-  type    = "string"
-  default = "eu-west-1"
+  type    = string
+  default = "eu-west-2"
 }
 
 # VPC Variables

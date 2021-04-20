@@ -1,14 +1,3 @@
-data "http" "my_public_ip" {
-  url = "https://ifconfig.me"
-  request_headers = {
-    Accept = "application/json"
-  }
-}
-
-locals {
-  my_ip = data.http.my_public_ip.body
-}
-
 resource "aws_security_group" "simple_sg" {
   name        = var.sg-name
   description = "Allow SSH access from host machine and access to internet"
